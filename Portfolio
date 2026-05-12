@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Divyaprada G | Google Student Ambassador 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:#f8fafc;
+    overflow-x:hidden;
+}
+
+/* background */
+
+.bg-animation{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.bg-animation span{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(56,189,248,0.08);
+    animation:float 18s linear infinite;
+}
+
+.bg-animation span:nth-child(1){
+    width:420px;
+    height:420px;
+    left:-120px;
+    top:-120px;
+}
+
+.bg-animation span:nth-child(2){
+    width:320px;
+    height:320px;
+    right:-100px;
+    bottom:-120px;
+    animation-duration:14s;
+}
+
+.bg-animation span:nth-child(3){
+    width:220px;
+    height:220px;
+    left:45%;
+    top:35%;
+    animation-duration:16s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-45px) rotate(180deg);
+    }
+    100%{
+        transform:translateY(0px) rotate(360deg);
+    }
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+/* navbar */
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:1.2rem 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,8,22,0.75);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(56,189,248,0.15);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    gap:2rem;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#cbd5e1;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.menu-btn{
+    display:none;
+    font-size:1.7rem;
+    color:#38bdf8;
+    cursor:pointer;
+}
+
+/* hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5rem;
+    padding:8rem 8% 4rem;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image::before{
+    content:'';
+    position:absolute;
+    inset:-15px;
+    border-radius:40px;
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    filter:blur(35px);
+    opacity:0.4;
+    z-index:-1;
+}
+
+.hero-image img{
+    width:350px;
+    height:450px;
+    object-fit:cover;
+    border-radius:35px;
+    border:4px solid #38bdf8;
+    box-shadow:0 0 45px rgba(56,189,248,0.25);
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+.hero-content{
+    flex:1;
+    min-width:320px;
+}
+
+.highlight-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(56,189,248,0.12);
+    border:1px solid rgba(56,189,248,0.3);
+    color:#38bdf8;
+    padding:0.9rem 1.4rem;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:1.5rem;
+    box-shadow:0 0 25px rgba(56,189,248,0.15);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 rgba(56,189,248,0.2);
+    }
+    50%{
+        box-shadow:0 0 25px rgba(56,189,248,0.35);
+    }
+    100%{
+        box-shadow:0 0 0 rgba(56,189,248,0.2);
+    }
+}
+
+.hero-content h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:1rem;
+}
+
+.hero-content h1 span{
+    color:#38bdf8;
+}
+
+.hero-content h3{
+    color:#38bdf8;
+    letter-spacing:1px;
+    margin-bottom:1rem;
+}
+
+.hero-content p{
+    color:#cbd5e1;
+    line-height:1.9;
+    max-width:700px;
+    margin:1.5rem 0;
+}
+
+/* stats */
+
+.stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin:2rem 0;
+}
+
+.stat-box{
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.15);
+    padding:1rem 1.5rem;
+    border-radius:22px;
+    transition:0.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.2);
+}
+
+.stat-box h2{
+    color:#38bdf8;
+    font-size:1.7rem;
+}
+
+.stat-box p{
+    margin-top:0.3rem;
+    color:#cbd5e1;
+}
+
+/* buttons */
+
+.btn-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:2rem;
+}
+
+.btn{
+    padding:1rem 2rem;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:0.35s;
+}
+
+.primary-btn{
+    background:#38bdf8;
+    color:#050816;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(56,189,248,0.45);
+}
+
+.secondary-btn{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.secondary-btn:hover{
+    background:#38bdf8;
+    color:#050816;
+}
+
+/* sections */
+
+section{
+    padding:5rem 8%;
+}
+
+.section-title{
+    font-size:2.7rem;
+    margin-bottom:3rem;
+    position:relative;
+    display:inline-block;
+}
+
+.section-title::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:60%;
+    height:4px;
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+/* glass effect */
+
+.glass{
+    background:rgba(15,23,42,0.7);
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:30px;
+    padding:2rem;
+    backdrop-filter:blur(12px);
+}
+
+/* about */
+
+.about p{
+    color:#cbd5e1;
+    line-height:1.9;
+    margin-bottom:1rem;
+}
+
+/* skills */
+
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+.skill{
+    padding:0.85rem 1.5rem;
+    border-radius:50px;
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.15);
+    transition:0.35s;
+}
+
+.skill:hover{
+    background:#38bdf8;
+    color:#050816;
+    transform:translateY(-5px);
+}
+
+/* cards */
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.timeline-card,
+.project-card,
+.achievement-card,
+.contact-card{
+    background:rgba(15,23,42,0.7);
+    border:1px solid rgba(56,189,248,0.12);
+    border-radius:28px;
+    padding:2rem;
+    transition:0.4s;
+}
+
+.timeline-card:hover,
+.project-card:hover,
+.achievement-card:hover,
+.contact-card:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.12);
+}
+
+.timeline-card h3,
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:0.6rem;
+}
+
+.timeline-card span{
+    color:#94a3b8;
+}
+
+.timeline-card ul,
+.project-card ul{
+    margin-top:1rem;
+    line-height:1.8;
+    color:#e2e8f0;
+    padding-left:1rem;
+}
+
+.project-card p{
+    color:#94a3b8;
+}
+
+/* grids */
+
+.projects-grid,
+.achievement-grid,
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:2rem;
+}
+
+/* achievements */
+
+.achievement-card{
+    text-align:left;
+}
+
+.achievement-card i{
+    font-size:2rem;
+    color:#38bdf8;
+    margin-bottom:1rem;
+}
+
+.achievement-card h3{
+    margin-bottom:0.8rem;
+}
+
+.achievement-card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+/* contact */
+
+.contact-card{
+    text-align:center;
+}
+
+.contact-card i{
+    font-size:2rem;
+    color:#38bdf8;
+    margin-bottom:1rem;
+}
+
+.contact-card a{
+    color:#f8fafc;
+    text-decoration:none;
+}
+
+/* footer */
+
+footer{
+    text-align:center;
+    padding:2rem;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .stats,
+    .btn-group{
+        justify-content:center;
+    }
+
+    .hero-content p{
+        margin:auto;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        right:-100%;
+        width:250px;
+        flex-direction:column;
+        background:#0f172a;
+        padding:2rem;
+        border-radius:20px;
+        transition:0.4s;
+    }
+
+    .nav-links.active{
+        right:5%;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-image img{
+        width:280px;
+        height:360px;
+    }
+
+    .hero-content h1{
+        font-size:2.4rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">Divyaprada G</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-image">
+
+        <img src="profile.jpg"
+        alt="Divyaprada G"
+        onerror="this.src='https://via.placeholder.com/350x450/0f172a/38bdf8?text=Divyaprada+G'">
+
+    </div>
+
+    <div class="hero-content">
+
+        <div class="highlight-badge">
+            <i class="fa-brands fa-google"></i>
+            Google Student Ambassador 2026
+        </div>
+
+        <h3>SOFTWARE ENGINEER • AI & DS STUDENT</h3>
+
+        <h1>
+            Hi, I'm <span>Divyaprada G</span>
+        </h1>
+
+        <p>
+            Backend-focused Software Engineer passionate about
+            Distributed Systems, Scalable Backend Architectures,
+            Real-Time Stream Processing, Concurrency,
+            and High-Performance Java Applications.
+            Currently pursuing B.E. in Artificial Intelligence &
+            Data Science at Siddaganga Institute of Technology.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h2>2250+</h2>
+                <p>Problems Solved</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>540+</h2>
+                <p>Hard Problems</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>1190</h2>
+                <p>Global Rank</p>
+            </div>
+
+        </div>
+
+        <div class="btn-group">
+
+            <a href="https://github.com/Divyaprada-G"
+            target="_blank"
+            class="btn primary-btn">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/divyapradag"
+            target="_blank"
+            class="btn secondary-btn">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+            </a>
+
+            <a href="https://leetcode.com/u/Divyaprada_G/"
+            target="_blank"
+            class="btn secondary-btn">
+                <i class="fa-solid fa-code"></i>
+                LeetCode
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="glass about">
+
+        <p>
+            I'm a backend-focused Software Engineer and AI & Data Science student
+            with strong interest in Distributed Systems, Scalability,
+            System Design, Concurrency, and Event-Driven Architectures.
+        </p>
+
+        <p>
+            I enjoy building high-performance systems using Java,
+            Redis, Apache Kafka, Docker, Kubernetes, MySQL,
+            and Real-Time Stream Processing technologies.
+        </p>
+
+        <p>
+            My engineering interests include Rate Limiting,
+            Fault Tolerance, Caching, Distributed Coordination,
+            and Scalable API Design.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="glass skills-grid">
+
+        <div class="skill">Java</div>
+        <div class="skill">Multithreading</div>
+        <div class="skill">Streams API</div>
+        <div class="skill">C++</div>
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Redis</div>
+        <div class="skill">Apache Kafka</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Microservices</div>
+        <div class="skill">Concurrency</div>
+        <div class="skill">Rate Limiting</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Kubernetes</div>
+        <div class="skill">Linux</div>
+        <div class="skill">System Design</div>
+        <div class="skill">Caching</div>
+        <div class="skill">Consistent Hashing</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">MongoDB</div>
+
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-card">
+
+            <h3>Software Engineer Intern — PraLoTech Solutions LLP</h3>
+
+            <span>Jan 2024 – Apr 2024</span>
+
+            <ul>
+                <li>Developed Java-based Movie Booking Desktop Application.</li>
+                <li>Implemented booking logic, seat selection, and SQL integration.</li>
+                <li>Optimized database queries and improved application performance.</li>
+            </ul>
+
+        </div>
+
+        <div class="timeline-card">
+
+            <h3>Software Engineering Instructor — HMS Polytechnic</h3>
+
+            <span>Mentored 60+ Students</span>
+
+            <ul>
+                <li>Taught SDLC, Git, debugging, and System Design concepts.</li>
+                <li>Guided students through hands-on mini-project development.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+
+            <h3>Distributed Rate Limiter</h3>
+
+            <p>Java • Redis • Docker</p>
+
+            <ul>
+                <li>Handled 10K+ concurrent requests using Token Bucket algorithm.</li>
+                <li>Achieved &lt;5ms latency using Redis coordination.</li>
+                <li>Designed scalable distributed architecture.</li>
+            </ul>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Adaptive Real-Time Traffic System</h3>
+
+            <p>Java • Event-Driven Architecture</p>
+
+            <ul>
+                <li>Processed real-time traffic data from 10K+ vehicles.</li>
+                <li>Implemented stream processing and recovery mechanisms.</li>
+                <li>Designed fault-tolerant distributed architecture.</li>
+            </ul>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Scalable URL Shortener</h3>
+
+            <p>Java • MySQL • REST APIs</p>
+
+            <ul>
+                <li>Developed scalable URL shortening system.</li>
+                <li>Optimized indexing and reduced latency by 40%.</li>
+                <li>Implemented efficient database query handling.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+    <h2 class="section-title">Achievements</h2>
+
+    <div class="achievement-grid">
+
+        <div class="achievement-card">
+
+            <i class="fa-brands fa-google"></i>
+
+            <h3>Google Student Ambassador 2026</h3>
+
+            <p>
+                Selected as Google Student Ambassador 2026,
+                leading student community initiatives and promoting
+                Google technologies.
+            </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            <h3>Smart India Hackathon 2025</h3>
+
+            <p>
+                Top 10 position in SIH Internal Hackathon
+                among 165+ teams.
+            </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>LeetCode Global Rank</h3>
+
+            <p>
+                Global Rank 1190 with 2250+ solved problems,
+                including 540+ Hard problems.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>
+                <a href="mailto:divyapradag15@gmail.com">
+                    divyapradag15@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h3>GitHub</h3>
+
+            <p>
+                <a href="https://github.com/Divyaprada-G" target="_blank">
+                    github.com/Divyaprada-G
+                </a>
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <h3>LinkedIn</h3>
+
+            <p>
+                <a href="https://www.linkedin.com/in/divyapradag" target="_blank">
+                    linkedin.com/in/divyapradag
+                </a>
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Location</h3>
+
+            <p>Tumkur, Karnataka, India</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 Divyaprada G • Google Student Ambassador 2026 • Software Engineer
+</footer>
+
+<script>
+
+/* mobile menu */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("active");
+
+});
+
+/* smooth scroll */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener('click',function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if(target){
+
+            target.scrollIntoView({
+                behavior:'smooth'
+            });
+
+        }
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
